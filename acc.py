@@ -19,6 +19,7 @@ class Account:
 
 
 class Checking(Account):
+    """This class generates checking account objects"""
 
     type = "checking"
 
@@ -34,11 +35,15 @@ jack_checking = Checking("jack.txt", 1)
 jack_checking.transfer(100)
 print(jack_checking.balance)
 jack_checking.commit()
+print(jack_checking.type)
 
 john_checking = Checking("john.txt", 1)
 john_checking.transfer(100)
 print(john_checking.balance)
 john_checking.commit()
+print(john_checking.type)
+
+print(jack_checking.__doc__)
 
 
 # account = Account("balance.txt")
